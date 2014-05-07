@@ -1,0 +1,12 @@
+/.idea/*.*
+/.idea/copyright/*.*
+/.idea/libraries/*.*
+/.idea/scopes/*.*
+/pulseorg.iml
+/pulseorg-backEnd/pulseorg-backEnd.iml
+/pulseorg-deployment/pulseorg-deployment.iml
+/pulseorg-frontEnd/pulseorg-frontEnd.iml
+/target/
+/pulseorg-backEnd/target/
+/pulseorg-deployment/target/
+/pulseorg-frontEnd/target/
