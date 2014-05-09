@@ -7,7 +7,7 @@
             <Package name="~com[.]tool[.]emailbot[.]domain[.]model([.].*)?"/>
         </Or>
         <Or>
-            <Bug pattern="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD" />
+            <Bug pattern="UUF_UNUSED_PUBLIC_OR_PROTECTED_FIELD"/>
         </Or>
     </Match>
 </FindBugsFilter>
