@@ -21,7 +21,7 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 /**
- * Defines a worker object.
+ * Defines a worker phone object.
  *
  * @author Edgar Rico (edgar.martinez.rico@gmail.com)
  */

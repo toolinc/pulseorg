@@ -2,11 +2,11 @@
 
 package com.toolsoft.pulse.infrastructure.inject;
 
-import com.toolsoft.tenant.TenancyHolderStrategy;
-import com.toolsoft.tenant.adapter.ThreadLocalTenancyStrategy;
-import com.toolsoft.tenant.adapter.jpa.EntityManagerTenantAwareProvider;
-import com.toolsoft.tenant.adapter.jpa.JpaTransactionManagerTenantAware;
-import com.toolsoft.tenant.adapter.jpa.SharedEntityManagerTenancyAware;
+import com.toolsoft.common.tenant.TenancyHolderStrategy;
+import com.toolsoft.common.tenant.adapter.ThreadLocalTenancyStrategy;
+import com.toolsoft.common.tenant.adapter.jpa.EntityManagerTenantAwareProvider;
+import com.toolsoft.common.tenant.adapter.jpa.JpaTransactionManagerTenantAware;
+import com.toolsoft.common.tenant.adapter.jpa.SharedEntityManagerTenancyAware;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

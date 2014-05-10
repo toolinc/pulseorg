@@ -2,9 +2,9 @@
 
 package com.toolsoft.pulse;
 
-import com.toolsoft.tenant.TenancyContext;
-import com.toolsoft.tenant.TenancyHolderStrategy;
-import com.toolsoft.tenant.domain.Tenant;
+import com.toolsoft.common.tenant.TenancyContext;
+import com.toolsoft.common.tenant.TenancyHolderStrategy;
+import com.toolsoft.common.tenant.domain.Tenant;
 
 import org.junit.Before;
 import org.springframework.transaction.PlatformTransactionManager;

@@ -4,9 +4,15 @@
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
     <persistence-unit name="pulsePUTest" transaction-type="RESOURCE_LOCAL">
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>com.toolsoft.pulse.domain.model.Country</class>
+        <class>com.toolsoft.pulse.domain.model.Reference</class>
+        <class>com.toolsoft.pulse.domain.model.ReferenceDetail</class>
         <class>com.toolsoft.pulse.domain.model.ReferenceTenant</class>
+        <class>com.toolsoft.pulse.domain.model.State</class>
         <class>com.toolsoft.pulse.domain.model.applicant.Applicant</class>
         <class>com.toolsoft.pulse.domain.model.worker.Worker</class>
+        <class>com.toolsoft.pulse.domain.model.worker.WorkerAddress</class>
+        <class>com.toolsoft.pulse.domain.model.worker.WorkerAddressType</class>
         <class>com.toolsoft.pulse.domain.model.worker.WorkerName</class>
         <class>com.toolsoft.pulse.domain.model.worker.WorkerNameType</class>
         <class>com.toolsoft.pulse.domain.model.worker.WorkerPhone</class>

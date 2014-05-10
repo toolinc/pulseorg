@@ -3,7 +3,7 @@
 package com.toolsoft.pulse.domain.model.worker;
 
 import com.toolsoft.pulse.domain.model.person.Person;
-import com.toolsoft.pulse.domain.model.person.PersonName;
+import com.toolsoft.pulse.domain.model.person.PersonAddress;
 
 import java.math.BigInteger;
 
@@ -21,30 +21,30 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 /**
- * Defines a worker name object.
+ * Defines a worker address object.
  *
  * @author Edgar Rico (edgar.martinez.rico@gmail.com)
  */
 @Entity
-@Table(name = "WorkerName", uniqueConstraints = {
-        @UniqueConstraint(name = "WorkerName_UK",
+@Table(name = "WorkerAddress", uniqueConstraints = {
+        @UniqueConstraint(name = "WorkerAddress_UK",
                 columnNames = {"idWorker", "idReferenceTenant"})})
-public class WorkerName extends PersonName {
+public class WorkerAddress extends PersonAddress {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idWorkerName")
+    @Column(name = "idWorkerAddress")
     private BigInteger id;
 
     @JoinColumn(name = "idWorker", nullable = false,
-            foreignKey = @ForeignKey(name = "WorkerName_Worker_FK"))
+            foreignKey = @ForeignKey(name = "WorkerAddress_Worker_FK"))
     @OneToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private Worker worker;
 
     @JoinColumn(name = "idReferenceTenant", nullable = false,
-            foreignKey = @ForeignKey(name = "WorkerName_WorkerNameType_FK"))
+            foreignKey = @ForeignKey(name = "WorkerAddress_WorkerAddressType_FK"))
     @OneToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    private WorkerNameType workerNameType;
+    private WorkerAddressType workerAddressType;
 
     @Override
     public BigInteger getId() {
@@ -66,13 +66,13 @@ public class WorkerName extends PersonName {
         this.worker = worker;
     }
 
-    public WorkerNameType getWorkerNameType() {
-        return workerNameType;
+    public WorkerAddressType getWorkerAddressType() {
+        return workerAddressType;
     }
 
-    public void setWorkerNameType(WorkerNameType workerNameType) {
-        assertArgumentNotNull(workerNameType, "Name type cannot be null.");
-        this.workerNameType = workerNameType;
+    public void setWorkerAddressType(WorkerAddressType workerAddressType) {
+        assertArgumentNotNull(workerAddressType, "Address Type is cannot be null.");
+        this.workerAddressType = workerAddressType;
     }
 
     @Override
